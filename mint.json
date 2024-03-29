@@ -22,7 +22,7 @@
     }
   ],
   "topbarCtaButton": {
-    "name": "Dashboard",
+    "name": "Müşteri Paneli",
     "url": "https://dashboard.mintlify.com"
   },
   "tabs": [
