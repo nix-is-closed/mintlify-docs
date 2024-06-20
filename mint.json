@@ -5,7 +5,7 @@
     "dark": "https://nodesty.com/_next/image?url=%2FnodestyGradient.png&w=256&q=75",
     "light": "https://nodesty.com/_next/image?url=%2FnodestyGradient.png&w=256&q=75"
   },
-  "favicon": "https://nodesty.com/favicon.png",
+  "favicon": "favicon.png",
   "colors": {
     "primary": "#4955e1",
     "light": "#4955e1",
