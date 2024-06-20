@@ -30,8 +30,8 @@
   },
   "tabs": [
     {
-        "name": "API References",
-        "url": "api-references"
+        "name": "Firewall Yönetimi",
+        "url": "firewall"
     },
     {
         "name": "Content",
