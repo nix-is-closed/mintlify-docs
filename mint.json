@@ -52,9 +52,7 @@
     {
       "group": "Başlangıç",
       "pages": [
-        "introduction",
-        "quickstart",
-        "development"
+        "introduction"
       ]
     },
     {
