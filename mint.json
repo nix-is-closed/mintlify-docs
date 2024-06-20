@@ -17,8 +17,8 @@
   },
   "topbarLinks": [
     {
-      "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "name": "Destek",
+      "url": "support@nodesty.com"
     }
   ],
   "topbarCtaButton": {
@@ -27,8 +27,8 @@
   },
   "tabs": [
     {
-      "name": "API Reference",
-      "url": "api-reference"
+      "name": "Firewall Yönetimi",
+      "url": "firewall"
     }
   ],
   "anchors": [
@@ -50,7 +50,7 @@
   ],
   "navigation": [
     {
-      "group": "Get Started",
+      "group": "Başlangıç",
       "pages": [
         "introduction",
         "quickstart",
