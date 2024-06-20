@@ -15,6 +15,9 @@
       "to": "#2a365c"
     }
   },
+  "primaryTab": {
+    "name": "Dökümentasyon"
+  },
   "topbarLinks": [
     {
       "name": "Destek",
