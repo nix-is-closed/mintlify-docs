@@ -7,12 +7,12 @@
   },
   "favicon": "https://nodesty.com/favicon.png",
   "colors": {
-    "primary": "#2a365c",
-    "light": "#2a365c",
-    "dark": "#2a365c",
+    "primary": "#4955e1",
+    "light": "#4955e1",
+    "dark": "#4955e1",
     "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
+      "from": "#2a365c",
+      "to": "#2a365c"
     }
   },
   "topbarLinks": [
