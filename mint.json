@@ -28,7 +28,7 @@
   "tabs": [
     {
       "name": "Firewall Yönetimi",
-      "url": "firewall"
+      "url": "/firewall"
     }
   ],
   "anchors": [
