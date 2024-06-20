@@ -31,15 +31,7 @@
   "tabs": [
     {
         "name": "Firewall Yönetimi",
-        "url": "firewall"
-    },
-    {
-        "name": "Content",
-        "url": "content"
-    },
-    {
-        "name": "Blog",
-        "url": "https://your-website.com/blog"
+        "url": "firewall/introduction"
     }
   ],
   "anchors": [
