@@ -30,8 +30,16 @@
   },
   "tabs": [
     {
-      "name": "Firewall Yönetimi",
-      "url": "/firewall"
+        "name": "API References",
+        "url": "api-references"
+    },
+    {
+        "name": "Content",
+        "url": "content"
+    },
+    {
+        "name": "Blog",
+        "url": "https://your-website.com/blog"
     }
   ],
   "anchors": [
@@ -75,6 +83,6 @@
     }
   ],
   "footerSocials": {
-    "discord": "https://discord.gg/nodesty",
+    "discord": "https://discord.gg/nodesty"
   }
 }
