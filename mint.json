@@ -75,7 +75,10 @@
     },
     {
       "group": "Firewall",
-      "pages": ["firewall/introduction"]
+      "pages": [
+        "firewall/introduction",
+        "firewall/always-active-protection"
+      ]
     }
   ],
   "footerSocials": {
