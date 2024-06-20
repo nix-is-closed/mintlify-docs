@@ -74,8 +74,8 @@
       ]
     },
     {
-      "group": "API Documentation",
-      "pages": ["api-reference/introduction"]
+      "group": "Firewall",
+      "pages": ["firewall/introduction"]
     }
   ],
   "footerSocials": {
