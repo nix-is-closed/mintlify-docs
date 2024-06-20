@@ -72,6 +72,10 @@
         "virtual-servers/change-password",
         "virtual-servers/upgrade"
       ]
+    },
+    {
+      "group": "API Documentation",
+      "pages": ["api-reference/introduction"]
     }
   ],
   "footerSocials": {
