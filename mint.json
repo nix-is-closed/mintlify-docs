@@ -62,6 +62,12 @@
       ]
     },
     {
+      "group": "Sanal Sunucu Yönetimi",
+      "pages": [
+        "virtual-servers/format-virtual-server"
+      ]
+    },
+    {
       "group": "Endpoint Examples",
       "pages": [
         "api-reference/endpoint/get",
