@@ -65,7 +65,8 @@
       "group": "Sanal Sunucu Yönetimi",
       "pages": [
         "virtual-servers/format",
-        "virtual-servers/change-password"
+        "virtual-servers/change-password",
+        "virtual-servers/upgrade"
       ]
     },
     {
