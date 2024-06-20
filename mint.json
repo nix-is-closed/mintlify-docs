@@ -8,8 +8,8 @@
   "favicon": "https://nodesty.com/favicon.png",
   "colors": {
     "primary": "#2a365c",
-    "light": "#07C983",
-    "dark": "#0D9373",
+    "light": "#2a365c",
+    "dark": "#2a365c",
     "anchors": {
       "from": "#0D9373",
       "to": "#07C983"
