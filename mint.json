@@ -78,7 +78,8 @@
       "pages": [
         "firewall/introduction",
         "firewall/always-active-protection",
-        "firewall/change-rdns"
+        "firewall/change-rdns",
+        "firewall/attack-chart"
       ]
     }
   ],
