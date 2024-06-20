@@ -31,7 +31,7 @@
   "tabs": [
     {
         "name": "Firewall Yönetimi",
-        "url": "firewall/index"
+        "url": "firewall"
     },
     {
         "name": "Content",
