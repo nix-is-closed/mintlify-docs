@@ -77,7 +77,8 @@
       "group": "Firewall",
       "pages": [
         "firewall/introduction",
-        "firewall/always-active-protection"
+        "firewall/always-active-protection",
+        "firewall/change-rdns"
       ]
     }
   ],
