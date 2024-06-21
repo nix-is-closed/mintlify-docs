@@ -57,4 +57,53 @@ echo Java %javaVersion% kuruldu.
 PAUSE
 ```
 
+```sh java-setup.sh
+
+#!/bin/bash
+
+# Kullanıcıdan hangi Java surumunu kurmak istedigini sor
+read -p "Hangi Java surumunu kurmak istiyorsunuz (ornegin, 22)? " javaVersion
+
+# Geçici dizini tanımla
+TEMP_DIR=$(mktemp -d)
+javaInstallerPath="$TEMP_DIR/jdk-$javaVersion_linux-x64_bin.deb"
+
+# Java indirme URL'sini belirle
+javaDownloadUrl="https://download.oracle.com/java/$javaVersion/latest/jdk-$javaVersion_linux-x64_bin.deb"
+
+# Adım 1: Java $javaVersion surumunu kur
+echo "Java $javaVersion surumunu kuruyor..."
+
+# Java kurulum dosyasını indir
+echo "Java $javaVersion kurulum dosyasını indiriyor..."
+curl -L -o "$javaInstallerPath" "$javaDownloadUrl"
+if [ $? -ne 0 ]; then
+    echo "Java $javaVersion kurulum dosyası indirilemedi."
+    exit 1
+fi
+
+# Java'yı sessizce kur
+echo "Java $javaVersion kuruyor..."
+sudo dpkg -i "$javaInstallerPath"
+if [ $? -ne 0 ]; then
+    echo "Java $javaVersion kurulumu basarisiz oldu."
+    exit 1
+fi
+
+# Java'yi path'e ekle
+JAVADIR="/usr/lib/jvm/jdk-$javaVersion"
+
+if ! grep -q "$JAVADIR/bin" <<< "$PATH"; then
+    echo "export PATH=\$PATH:$JAVADIR/bin" >> ~/.bashrc
+    source ~/.bashrc
+fi
+
+echo "Java $javaVersion kuruldu."
+
+# Geçici dosyayı temizle
+rm -rf "$TEMP_DIR"
+
+
+```
+
 </CodeGroup>
