@@ -1,0 +1,60 @@
+---
+title: Java Kurulumu
+description: 'Sadece bir komut dosyası ile Java Kurulumu sağlamak.'
+---
+
+<CodeGroup>
+
+```bat java-setup.bat
+@echo off
+REM Kullanıcıdan hangi Java surumunu kurmak istedigini sor
+set /p javaVersion="Hangi Java surumunu kurmak istiyorsunuz (ornegin, 22)? "
+
+REM Gecici dizini tanimla
+set TEMP_DIR=%TEMP%
+set "javaInstallerPath=%TEMP_DIR%\jdk-%javaVersion%_windows-x64_bin.exe"
+
+REM Java indirme URL'sini belirle
+set "javaDownloadUrl=https://download.oracle.com/java/%javaVersion%/latest/jdk-%javaVersion%_windows-x64_bin.exe"
+
+REM Adim 1: Java %javaVersion% surumunu kur
+echo Java %javaVersion% surumunu kuruyor...
+
+REM Java kurulum dosyasini indir
+echo Java %javaVersion% kurulum dosyasini indiriyor...
+curl -L -o "%javaInstallerPath%" "%javaDownloadUrl%"
+if %ERRORLEVEL% neq 0 (
+    echo Java %javaVersion% kurulum dosyasi indirilemedi.
+    PAUSE
+    exit /b 1
+)
+
+REM Java'yi sessizce kur
+echo Java %javaVersion% kuruyor...
+"%javaInstallerPath%" /s INSTALLDIR="%ProgramFiles%\Java\jdk-%javaVersion%"
+if %ERRORLEVEL% neq 0 (
+    echo Java %javaVersion% kurulumu basarisiz oldu.
+    PAUSE
+    exit /b 1
+)
+
+REM Java kurulum dizinini bul
+set JAVADIR=%ProgramFiles%\Java\jdk-%javaVersion%
+
+REM Java'yi path'e ekle
+setx /M PATH "%JAVADIR%\bin;%PATH%"
+if %ERRORLEVEL% neq 0 (
+    echo Java %javaVersion% path'e ekleme basarisiz oldu.
+    PAUSE
+    exit /b 1
+)
+
+REM PATH degisikliginin etkili olmasi icin yeni bir cmd baslat ve kapat
+cmd /c "echo Path guncelleniyor... & exit"
+
+echo Java %javaVersion% kuruldu.
+
+PAUSE
+```
+
+</CodeGroup>
