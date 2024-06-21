@@ -81,6 +81,12 @@
         "firewall/change-rdns",
         "firewall/attack-chart"
       ]
+    },
+    {
+      "group": "Scriptler",
+      "pages": [
+        "scripts/java-setup"
+      ]
     }
   ],
   "footerSocials": {
