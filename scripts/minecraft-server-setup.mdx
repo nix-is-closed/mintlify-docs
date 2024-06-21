@@ -1,0 +1,165 @@
+---
+title: Minecraft Sunucusu Kurulumu
+description: 'Sadece bir komut dosyası ile Minecraft Sunucusu Kurulumu sağlamak.'
+---
+
+<CodeGroup>
+
+```bat minecraft-server-setup.bat
+@echo off
+REM Gecici dizini tanimla
+set TEMP_DIR=%TEMP%
+set "javaInstallerPath=%TEMP_DIR%\jdk-22_windows-x64_bin.exe"
+
+REM Adim 1: En son Java 22 surumunu kur
+echo En son Java 22 surumunu kuruyor...
+
+REM Java indirme URL'sini belirle
+set "javaDownloadUrl=https://download.oracle.com/java/22/latest/jdk-22_windows-x64_bin.exe"
+
+REM Java kurulum dosyasini indir
+echo Java kurulum dosyasini indiriyor...
+curl -L -o "%javaInstallerPath%" "%javaDownloadUrl%"
+if %ERRORLEVEL% neq 0 (
+    echo Java kurulum dosyasi indirilemedi.
+    PAUSE
+    exit /b 1
+)
+
+REM Java'yi sessizce kur
+echo Java'yi kuruyor...
+"%javaInstallerPath%" /s INSTALLDIR="%ProgramFiles%\Java\jdk-22"
+if %ERRORLEVEL% neq 0 (
+    echo Java kurulumu basarisiz oldu.
+    PAUSE
+    exit /b 1
+)
+
+REM Java kurulum dizinini bul
+set JAVADIR=%ProgramFiles%\Java\jdk-22
+
+REM Java'yi path'e ekle
+setx /M PATH "%JAVADIR%\bin;%PATH%"
+if %ERRORLEVEL% neq 0 (
+    echo Java'yi path'e ekleme basarisiz oldu.
+    PAUSE
+    exit /b 1
+)
+
+REM PATH degisikliginin etkili olmasi icin yeni bir cmd baslat ve kapat
+cmd /c "echo Path guncelleniyor... & exit"
+
+REM Java kurulumunu dogrula
+java -version
+if errorlevel 1 (
+    echo Java dogrulanamadi.
+    PAUSE
+    exit /b 1
+)
+
+REM Adim 2: Minecraft sunucu dosyalarini indir
+echo Minecraft sunucu dosyalarini indiriyor...
+
+REM Masaustunde Minecraft sunucu klasoru olustur
+set "minecraftDir=%USERPROFILE%\Desktop\Minecraft_Server"
+if not exist "%minecraftDir%" mkdir "%minecraftDir%"
+
+REM Minecraft sunucu indirme URL'sini tanimla
+set "minecraftDownloadUrl=https://launcher.mojang.com/v1/objects/522163b8ff1e78bc869e9b5cf4c7d9bb1716e05b/server.jar"
+set "minecraftJarPath=%minecraftDir%\minecraft_server.jar"
+
+REM Minecraft sunucu jar dosyasini indir
+echo Minecraft sunucu jar dosyasini indiriyor...
+curl -L -o "%minecraftJarPath%" "%minecraftDownloadUrl%"
+if %ERRORLEVEL% neq 0 (
+    echo Minecraft sunucu dosyasi indirilemedi.
+    PAUSE
+    exit /b 1
+)
+
+REM EULA'yi otomatik olarak kabul et
+set "eulaFilePath=%minecraftDir%\eula.txt"
+echo eula=true > "%eulaFilePath%"
+
+echo Minecraft sunucu kurulumu tamamlandi. Sunucu dosyalarini masaustunde 'Minecraft_Server' klasorunde bulabilirsiniz.
+
+PAUSE
+```
+
+```sh minecraft-server-setup.sh
+#!/bin/bash
+
+# Geçici dizini tanımla
+TEMP_DIR=$(mktemp -d)
+javaInstallerPath="$TEMP_DIR/jdk-22_linux-x64_bin.deb"
+
+# Adım 1: En son Java 22 sürümünü kur
+echo "En son Java 22 surumunu kuruyor..."
+
+# Java indirme URL'sini belirle
+javaDownloadUrl="https://download.oracle.com/java/22/latest/jdk-22_linux-x64_bin.deb"
+
+# Java kurulum dosyasını indir
+echo "Java kurulum dosyasını indiriyor..."
+curl -L -o "$javaInstallerPath" "$javaDownloadUrl"
+if [ $? -ne 0 ]; then
+    echo "Java kurulum dosyası indirilemedi."
+    exit 1
+fi
+
+# Java'yı sessizce kur
+echo "Java'yı kuruyor..."
+sudo dpkg -i "$javaInstallerPath"
+if [ $? -ne 0 ]; then
+    echo "Java kurulumu basarisiz oldu."
+    exit 1
+fi
+
+# Java kurulum dizinini bul
+JAVADIR="/usr/lib/jvm/jdk-22"
+
+# Java'yi path'e ekle
+if ! grep -q "$JAVADIR/bin" <<< "$PATH"; then
+    echo "export PATH=\$PATH:$JAVADIR/bin" >> ~/.bashrc
+    source ~/.bashrc
+fi
+
+# Java kurulduğunu belirten mesaj
+echo "Java 22 kuruldu."
+
+# Adım 2: Minecraft sunucu dosyalarını indir
+echo "Minecraft sunucu dosyalarını indiriyor..."
+
+# Masaüstünde Minecraft sunucu klasörü oluştur
+minecraftDir="$HOME/Desktop/Minecraft_Server"
+if [ ! -d "$minecraftDir" ]; then
+    mkdir -p "$minecraftDir"
+fi
+
+# Minecraft sunucu indirme URL'sini tanımla
+minecraftDownloadUrl="https://launcher.mojang.com/v1/objects/522163b8ff1e78bc869e9b5cf4c7d9bb1716e05b/server.jar"
+minecraftJarPath="$minecraftDir/minecraft_server.jar"
+
+# Minecraft sunucu jar dosyasını indir
+echo "Minecraft sunucu jar dosyasını indiriyor..."
+curl -L -o "$minecraftJarPath" "$minecraftDownloadUrl"
+if [ $? -ne 0 ]; then
+    echo "Minecraft sunucu dosyası indirilemedi."
+    exit 1
+fi
+
+# EULA'yı otomatik olarak kabul et
+eulaFilePath="$minecraftDir/eula.txt"
+echo "eula=true" > "$eulaFilePath"
+
+# Minecraft sunucusunun kurulduğunu belirten mesaj
+echo "Minecraft sunucu kurulumu tamamlandi. Sunucu dosyalarini masaustunde 'Minecraft_Server' klasorunde bulabilirsiniz."
+
+# Geçici dosyayı temizle
+rm -rf "$TEMP_DIR"
+
+# Kullanıcıya bir mesaj göster ve bekle
+read -p "Devam etmek icin Enter tusuna basin..."
+```
+
+</CodeGroup>
