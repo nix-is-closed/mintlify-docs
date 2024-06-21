@@ -21,7 +21,7 @@
   "topbarLinks": [
     {
       "name": "Destek",
-      "url": "support@nodesty.com"
+      "url": "mailto:support@nodesty.com"
     }
   ],
   "topbarCtaButton": {
