@@ -85,7 +85,8 @@
     {
       "group": "Scriptler",
       "pages": [
-        "scripts/java-setup"
+        "scripts/java-setup",
+        "scripts/minecraft-server-setup"
       ]
     }
   ],
