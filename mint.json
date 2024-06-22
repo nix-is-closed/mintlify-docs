@@ -15,6 +15,10 @@
       "to": "#2a365c"
     }
   },
+  {
+  "translation": {
+    "search": "Ara"
+  },
   "primaryTab": {
     "name": "Dokümantasyon"
   },
