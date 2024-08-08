@@ -69,7 +69,8 @@
       "pages": [
         "virtual-servers/format",
         "virtual-servers/upgrade",
-        "virtual-servers/change-password"
+        "virtual-servers/change-password",
+        "virtual-servers/backup-restore"
       ]
     },
     {
