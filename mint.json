@@ -80,7 +80,7 @@
         "firewall/always-active-protection",
         "firewall/change-rdns",
         "firewall/attack-chart",
-        "firewall/attack-webhook"
+        "firewall/attack-notifications"
       ]
     },
     {
