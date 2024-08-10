@@ -35,6 +35,10 @@
     {
         "name": "Firewall Yönetimi",
         "url": "firewall"
+    },
+     {
+        "name": "Genel Sorunlar",
+        "url": "general-problems"
     }
   ],
   "anchors": [
@@ -88,6 +92,12 @@
       "pages": [
         "scripts/java-setup",
         "scripts/minecraft-server-setup"
+      ]
+    },
+     {
+      "group": "Genel Sorunlar",
+      "pages": [
+        "general-problems/credssp"
       ]
     }
   ],
