@@ -85,7 +85,8 @@
         "firewall/always-active-protection",
         "firewall/change-rdns",
         "firewall/attack-chart",
-        "firewall/attack-notifications"
+        "firewall/attack-notifications",
+        "firewall/rule-add-or-manage"
       ]
     },
     {
