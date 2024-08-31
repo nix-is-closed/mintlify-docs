@@ -86,7 +86,11 @@
         "firewall/change-rdns",
         "firewall/attack-chart",
         "firewall/attack-notifications",
-        "firewall/rule-add-or-manage"
+        "firewall/rule-add-or-manage",
+        {
+                "group": "Nested Reference Pages",
+                "pages": ["nested-reference-page"]
+        }
       ]
     },
     {
