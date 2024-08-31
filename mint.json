@@ -92,7 +92,7 @@
                 "pages": [
                   {
                     "group": "Minecraft",
-                    "pages": ["firewall/game/minecraft"]
+                    "pages": ["firewall/game/minecraft/introduction"]
                   }
                 ]
         }
