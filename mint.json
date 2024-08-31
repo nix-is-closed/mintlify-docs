@@ -92,7 +92,7 @@
                 "pages": [
                   {
                     "group": "Minecraft",
-                    "pages": ["firewall/game/minecraft/introduction", "firewall/game/minecraft/set-dns"]
+                    "pages": ["firewall/game/minecraft/introduction", "firewall/game/minecraft/set-dns", "firewall/game/minecraft/change"]
                   }
                 ]
         }
