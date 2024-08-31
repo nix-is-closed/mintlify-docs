@@ -90,7 +90,7 @@
         {
           "group": "Oyun Koruması",
           "pages:" [ 
-            "firewall/game/minecraft"
+            "firewall/game/minecraft",
           ]
         }
       ]
