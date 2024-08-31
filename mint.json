@@ -89,7 +89,7 @@
         "firewall/rule-add-or-manage",
         {
                 "group": "Nested Reference Pages",
-                "pages": ["nested-reference-page"]
+                "pages": ["firewall/game/minecraft"]
         }
       ]
     },
