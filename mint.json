@@ -86,13 +86,7 @@
         "firewall/change-rdns",
         "firewall/attack-chart",
         "firewall/attack-notifications",
-        "firewall/rule-add-or-manage",
-        {
-          "group": "Oyun Koruması",
-          "pages:" [ 
-            "firewall/game/minecraft",
-          ]
-        }
+        "firewall/rule-add-or-manage"
       ]
     },
     {
