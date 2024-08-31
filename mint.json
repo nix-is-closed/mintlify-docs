@@ -88,8 +88,13 @@
         "firewall/attack-notifications",
         "firewall/rule-add-or-manage",
         {
-                "group": "Nested Reference Pages",
-                "pages": ["firewall/game/minecraft"]
+                "group": "Oyun Koruması",
+                "pages": [
+                  {
+                    "group": "Minecraft",
+                    "pages": ["firewall/game/minecraft"]
+                  }
+                ]
         }
       ]
     },
