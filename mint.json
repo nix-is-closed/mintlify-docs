@@ -2,8 +2,8 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "Nodesty Dokümantasyon",
   "logo": {
-    "dark": "https://nodesty.com/_next/image?url=%2FnodestyGradient.png&w=256&q=75",
-    "light": "https://nodesty.com/_next/image?url=%2FnodestyGradient.png&w=256&q=75"
+    "dark": "https://nodesty.com/_ipx/s_140x32/nodestyGradient.png",
+    "light": "https://nodesty.com/_ipx/s_140x32/nodestyGradient.png"
   },
   "favicon": "favicon.png",
   "colors": {
