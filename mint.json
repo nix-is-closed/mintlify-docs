@@ -1,122 +1,128 @@
 {
-  "$schema": "https://mintlify.com/schema.json",
-  "name": "Nodesty Dokümantasyon",
-  "logo": {
-    "dark": "https://nodesty.com/_ipx/s_140x32/nodestyGradient.png",
-    "light": "https://nodesty.com/_ipx/s_140x32/nodestyGradient.png"
-  },
-  "favicon": "favicon.png",
-  "colors": {
-    "primary": "#4955e1",
-    "light": "#4955e1",
-    "dark": "#4955e1",
-    "anchors": {
-      "from": "#2a365c",
-      "to": "#2a365c"
+    "$schema": "https://mintlify.com/schema.json",
+    "name": "Nodesty Dokümantasyon",
+    "logo": {
+      "dark": "https://nodesty.com/_ipx/s_140x32/nodestyGradient.png",
+      "light": "https://nodesty.com/_ipx/s_140x32/nodestyGradient.png"
+    },
+    "favicon": "favicon.png",
+    "colors": {
+      "primary": "#4955e1",
+      "light": "#4955e1",
+      "dark": "#4955e1",
+      "anchors": {
+        "from": "#2a365c",
+        "to": "#2a365c"
+      }
+    },
+    "translation": {
+      "search": "Ara"
+    },
+    "primaryTab": {
+      "name": "Dokümantasyon"
+    },
+    "topbarLinks": [
+      {
+        "name": "Destek",
+        "url": "mailto:support@nodesty.com"
+      }
+    ],
+    "topbarCtaButton": {
+      "name": "Müşteri Paneli",
+      "url": "https://musteri.nodesty.com"
+    },
+    "tabs": [
+      {
+          "name": "Firewall Yönetimi",
+          "url": "firewall"
+      },
+      {
+          "name": "Genel Sorunlar",
+          "url": "general-problems"
+      },
+      {
+          "name": "API",
+          "url": "api"
+      }
+    ],
+    "anchors": [
+      {
+        "name": "Anasayfa",
+        "icon": "house",
+        "url": "https://nodesty.com"
+      },
+      {
+        "name": "Topluluk",
+        "icon": "discord",
+        "url": "https://discord.gg/nodesty"
+      }
+    ],
+    "navigation": [
+      {
+        "group": "Başlangıç",
+        "pages": [
+          "introduction",
+          "who-are-we",
+          "faq",
+          "discord-link"
+        ]
+      },
+      {
+        "group": "DDoS Koruması",
+        "pages": [
+          "ddos-protection"
+        ]
+      },
+      {
+        "group": "Sanal Sunucu Yönetimi",
+        "pages": [
+          "virtual-servers/format",
+          "virtual-servers/upgrade",
+          "virtual-servers/change-password",
+          "virtual-servers/backup-restore"
+        ]
+      },
+      {
+        "group": "Firewall",
+        "pages": [
+          "firewall/introduction",
+          "firewall/always-active-protection",
+          "firewall/change-rdns",
+          "firewall/attack-chart",
+          "firewall/attack-notifications",
+          "firewall/rule-add-or-manage",
+          {
+                  "group": "Oyun Koruması",
+                  "pages": [
+                    {
+                      "group": "Minecraft",
+                      "pages": ["firewall/game/minecraft/introduction", "firewall/game/minecraft/set-dns", "firewall/game/minecraft/change", "firewall/game/minecraft/stats"]
+                    }
+                  ]
+          }
+        ]
+      },
+      {
+        "group": "API",
+        "pages": [
+          "api/users-me"
+        ]
+      },
+      {
+        "group": "Scriptler",
+        "pages": [
+          "scripts/java-setup",
+          "scripts/minecraft-server-setup"
+        ]
+      },
+       {
+        "group": "Genel Sorunlar",
+        "pages": [
+          "general-problems/credssp"
+        ]
+      }
+    ],
+    "footerSocials": {
+      "discord": "https://discord.gg/nodesty"
     }
-  },
-  "translation": {
-    "search": "Ara"
-  },
-  "primaryTab": {
-    "name": "Dokümantasyon"
-  },
-  "topbarLinks": [
-    {
-      "name": "Destek",
-      "url": "mailto:support@nodesty.com"
-    }
-  ],
-  "topbarCtaButton": {
-    "name": "Müşteri Paneli",
-    "url": "https://musteri.nodesty.com"
-  },
-  "tabs": [
-    {
-        "name": "Firewall Yönetimi",
-        "url": "firewall"
-    },
-    {
-        "name": "Genel Sorunlar",
-        "url": "general-problems"
-    },
-    {
-        "name": "API",
-        "url": "api"
-    }
-  ],
-  "anchors": [
-    {
-      "name": "Anasayfa",
-      "icon": "house",
-      "url": "https://nodesty.com"
-    },
-    {
-      "name": "Topluluk",
-      "icon": "discord",
-      "url": "https://discord.gg/nodesty"
-    }
-  ],
-  "navigation": [
-    {
-      "group": "Başlangıç",
-      "pages": [
-        "introduction",
-        "who-are-we",
-        "faq",
-        "discord-link"
-      ]
-    },
-    {
-      "group": "DDoS Koruması",
-      "pages": [
-        "ddos-protection"
-      ]
-    },
-    {
-      "group": "Sanal Sunucu Yönetimi",
-      "pages": [
-        "virtual-servers/format",
-        "virtual-servers/upgrade",
-        "virtual-servers/change-password",
-        "virtual-servers/backup-restore"
-      ]
-    },
-    {
-      "group": "Firewall",
-      "pages": [
-        "firewall/introduction",
-        "firewall/always-active-protection",
-        "firewall/change-rdns",
-        "firewall/attack-chart",
-        "firewall/attack-notifications",
-        "firewall/rule-add-or-manage",
-        {
-                "group": "Oyun Koruması",
-                "pages": [
-                  {
-                    "group": "Minecraft",
-                    "pages": ["firewall/game/minecraft/introduction", "firewall/game/minecraft/set-dns", "firewall/game/minecraft/change", "firewall/game/minecraft/stats"]
-                  }
-                ]
-        },
-      ]
-    },
-    {
-      "group": "Scriptler",
-      "pages": [
-        "scripts/java-setup",
-        "scripts/minecraft-server-setup"
-      ]
-    },
-     {
-      "group": "Genel Sorunlar",
-      "pages": [
-        "general-problems/credssp"
-      ]
-    }
-  ],
-  "footerSocials": {
-    "discord": "https://discord.gg/nodesty"
   }
-}
