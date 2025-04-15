@@ -36,7 +36,7 @@
         "name": "Firewall Yönetimi",
         "url": "firewall"
     },
-     {
+    {
         "name": "Genel Sorunlar",
         "url": "general-problems"
     },
@@ -107,6 +107,7 @@
         "pages": [
           "api/users-me"
           }
+        ]
     },
     {
       "group": "Scriptler",
