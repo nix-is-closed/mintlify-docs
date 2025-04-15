@@ -1,0 +1,49 @@
+---
+title: 'Kullanıcı Bilgilerini Getir (@me)' 
+description: 'Mevcut kimliği doğrulanmış kullanıcının bilgilerini almak için bu endpointi kullanın.'
+---
+
+import { Card } from '@mintlify/components'; 
+import { CodeBlock } from '@mintlify/components'; 
+
+Mevcut oturum açmış kullanıcının hesap detaylarını sorgulamak için aşağıdaki bilgileri kullanabilirsiniz.
+
+## Endpoint Bilgileri
+
+<Card title="Endpoint Detayları" icon="fa-solid fa-circle-info"> 
+    <p><strong>HTTP Metodu:</strong> <span className="font-mono bg-green-100 text-green-800 px-2 py-1 rounded text-sm">GET</span></p>
+    <p><strong>URL Yolu:</strong> <span className="font-mono">/api/users/@me</span></p>
+    <p><strong>Tam URL (Örnek):</strong> <span className="font-mono">https://api.nodesty.com/api/users/@me</span></p>
+    <p className="mt-2 text-xs text-gray-500">Not: `https://api.nodesty.com` yerine kendi API ana adresinizi kullanmalısınız.</p>
+</Card>
+
+## Kimlik Doğrulama (Authentication)
+
+Bu isteği yapabilmek için `Authorization` başlığını (Header) kullanmanız gerekmektedir.
+
+*   **Header Adı:** `Authorization`
+*   **Değer Formatı:** `PAT <TOKEN>`
+
+`<TOKEN>` kısmını size özel Nodesty Kişisel Erişim Token'ınız (Personal Access Token) ile değiştirin. Token'ınızı Müşteri Paneli'nden alabilirsiniz.
+
+## İstek (Request)
+
+Bu endpoint `GET` metodu ile çalıştığı için bir **Request Body** göndermenize gerek yoktur.
+
+## Örnek İstek (cURL)
+
+Aşağıdaki komut ile kendi token'ınızı ve API adresinizi kullanarak kullanıcı bilgilerinizi sorgulayabilirsiniz:
+
+<CodeBlock language="bash">
+  {`# YOUR_PERSONAL_ACCESS_TOKEN kısmını kendi tokenınız ile değiştirin.
+# https://api.nodesty.com kısmını API'nizin adresi ile değiştirin.
+
+curl --request GET \\
+     --url https://api.nodesty.com/api/users/@me \\
+     --header 'Authorization: PAT YOUR_PERSONAL_ACCESS_TOKEN' \\
+     --header 'Accept: application/json'`}
+</CodeBlock>
+
+<br/> 
+
+Bu isteği başarıyla gönderdiğinizde, sunucu size kullanıcı bilgilerinizi içeren bir yanıt dönecektir. Hatalı durumlarda (örneğin geçersiz token) uygun bir HTTP hata kodu alırsınız.
