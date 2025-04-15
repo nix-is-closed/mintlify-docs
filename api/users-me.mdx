@@ -13,8 +13,7 @@ Mevcut oturum açmış kullanıcının hesap detaylarını sorgulamak için aşa
 <Card title="Endpoint Detayları" icon="fa-solid fa-circle-info"> 
     <p><strong>HTTP Metodu:</strong> <span className="font-mono bg-green-100 text-green-800 px-2 py-1 rounded text-sm">GET</span></p>
     <p><strong>URL Yolu:</strong> <span className="font-mono">/api/users/@me</span></p>
-    <p><strong>Tam URL (Örnek):</strong> <span className="font-mono">https://api.nodesty.com/api/users/@me</span></p>
-    <p className="mt-2 text-xs text-gray-500">Not: `https://api.nodesty.com` yerine kendi API ana adresinizi kullanmalısınız.</p>
+    <p><strong>Tam URL (Örnek):</strong> <span className="font-mono">https://nodesty.com/api/users/@me</span></p>
 </Card>
 
 ## Kimlik Doğrulama (Authentication)
@@ -36,10 +35,10 @@ Aşağıdaki komut ile kendi token'ınızı ve API adresinizi kullanarak kullan�
 
 <CodeBlock language="bash">
   {`# YOUR_PERSONAL_ACCESS_TOKEN kısmını kendi tokenınız ile değiştirin.
-# https://api.nodesty.com kısmını API'nizin adresi ile değiştirin.
+# https://nodesty.com kısmını API'nizin adresi ile değiştirin.
 
 curl --request GET \\
-     --url https://api.nodesty.com/api/users/@me \\
+     --url https://nodesty.com/api/users/@me \\
      --header 'Authorization: PAT YOUR_PERSONAL_ACCESS_TOKEN' \\
      --header 'Accept: application/json'`}
 </CodeBlock>
