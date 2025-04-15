@@ -103,12 +103,6 @@
       ]
     },
     {
-        "group": "API",
-        "pages": [
-          "api/users-me"
-        ]
-    },
-    {
       "group": "Scriptler",
       "pages": [
         "scripts/java-setup",
