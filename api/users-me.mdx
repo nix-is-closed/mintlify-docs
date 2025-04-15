@@ -3,9 +3,6 @@ title: 'Kullanıcı Bilgilerini Getir (@me)'
 description: 'Mevcut kimliği doğrulanmış kullanıcının bilgilerini almak için bu endpointi kullanın.'
 ---
 
-import { Card } from '@mintlify/components'; 
-import { CodeBlock } from '@mintlify/components'; 
-
 Mevcut oturum açmış kullanıcının hesap detaylarını sorgulamak için aşağıdaki bilgileri kullanabilirsiniz.
 
 ## Endpoint Bilgileri
@@ -33,16 +30,16 @@ Bu endpoint `GET` metodu ile çalıştığı için bir **Request Body** gönderm
 
 Aşağıdaki komut ile kendi token'ınızı ve API adresinizi kullanarak kullanıcı bilgilerinizi sorgulayabilirsiniz:
 
-<CodeBlock language="bash">
-  {`# YOUR_PERSONAL_ACCESS_TOKEN kısmını kendi tokenınız ile değiştirin.
+
+```bash 
+{`# YOUR_PERSONAL_ACCESS_TOKEN kısmını kendi tokenınız ile değiştirin.
 # https://nodesty.com kısmını API'nizin adresi ile değiştirin.
 
 curl --request GET \\
      --url https://nodesty.com/api/users/@me \\
      --header 'Authorization: PAT YOUR_PERSONAL_ACCESS_TOKEN' \\
      --header 'Accept: application/json'`}
-</CodeBlock>
-
+```
 <br/> 
 
 Bu isteği başarıyla gönderdiğinizde, sunucu size kullanıcı bilgilerinizi içeren bir yanıt dönecektir. Hatalı durumlarda (örneğin geçersiz token) uygun bir HTTP hata kodu alırsınız.
