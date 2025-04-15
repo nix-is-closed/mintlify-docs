@@ -100,12 +100,13 @@
                   }
                 ]
         },
-        {
+      ]
+    },
+    {
         "group": "API",
         "pages": [
           "api/users-me"
           }
-      ]
     },
     {
       "group": "Scriptler",
