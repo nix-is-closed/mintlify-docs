@@ -39,6 +39,10 @@
      {
         "name": "Genel Sorunlar",
         "url": "general-problems"
+    },
+    {
+        "name": "API",
+        "url": "api"
     }
   ],
   "anchors": [
@@ -95,7 +99,12 @@
                     "pages": ["firewall/game/minecraft/introduction", "firewall/game/minecraft/set-dns", "firewall/game/minecraft/change", "firewall/game/minecraft/stats"]
                   }
                 ]
-        }
+        },
+        {
+        "group": "API",
+        "pages": [
+          "api/users-me"
+          }
       ]
     },
     {
